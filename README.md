@@ -1,51 +1,64 @@
-# LDM_DSM_6_Semestre
-Repositório para arquivos referente a atividade final do curso Laboratório de Desenvolvimento Multiplataforma
+# NLP_DSM_6_Semestre
+Repositório para arquivos referente a atividade final do Curso de Desenvolvimento de Software Multiplataforma da disciplina Processamento de Linguagem Natural
 
 Integrantes:
 
-Davi Aquila Sirqueira da Silva
-João Vitor Moreira Mariano da Silva
 Leonardo Rodrigues Dezoti Ferraz
 Lucas Augusto Borges Rogatto
-Pedro Henrique Pires de Godoy
 Vitor Gabriel Montini Melo
 
 
-Linhas Itapira
+Análise de Emoções em Textos
 
-Este projeto foi desenvolvido para Web, Desktop e Mobile, com o objetivo de fornecer informações sobre as linhas e horários de ônibus, além da funcionalidade de visualizar a localização em tempo real dos ônibus em um mapa.
+Descrição e Motivação do Problema:
+O objetivo deste projeto é desenvolver um modelo de aprendizado de máquina para identificar emoções em textos, utilizando postagens de redes sociais. A classificação de emoções é uma ferramenta poderosa em áreas como análise de sentimentos, marketing e saúde mental.
 
-A solução foi construída utilizando quatro serviços da AWS para garantir alta performance, escalabilidade e segurança:
-
--Amazon EC2: Utilizado como servidor para hospedar o projeto e o banco de dados relacional, oferecendo flexibilidade na configuração do ambiente.
-
--Amazon DynamoDB: Armazena as coordenadas das localizações dos ônibus em um banco de dados NoSQL, garantindo escalabilidade automática e alto desempenho.
-
--AWS Lambda: Contém a função responsável por consultar a localização dos ônibus e enviar essas informações para a API, de forma rápida e econômica.
-
--Amazon API Gateway: Gerencia a API que entrega as informações da localização dos ônibus, fornecidas pelo AWS Lambda, até o projeto, com configuração simples e comunicação segura.
+Descrição da Base de Dados
+Fonte: Dataset contendo 5.250 postagens em redes sociais, cada uma classificada em diferentes categorias emocionais, como alegria, raiva, tristeza, e surpresa.
+Distribuição: Classes bem distribuídas para evitar viés no treinamento.
+Processo de Obtenção: Dataset foi obtido em formato público e preprocessado para adequação ao modelo.
 
 
-Ferramentas Utilizadas:
+Objetivo de Negócio ou Científico
+Criar um modelo que possa ser utilizado para:
 
--Visual Studio Code: Conectado ao Amazon EC2 via SSH para o desenvolvimento e manutenção do código.
-
-
-Implementações:
-O código foi ajustado para, em vez de consultar o MongoDB como no projeto original, se preparar para receber informações da API, tratá-las e utilizá-las.
-
-Desenvolvido em Python:
-Função Lambda para consultar e enviar a localização dos ônibus em formato JSON.
-Simulação da atualização em tempo real das localizações no DynamoDB.
+-Compreender a percepção do público em campanhas publicitárias.
+-Monitorar emoções relacionadas a saúde mental em grandes populações.
+-Estudar padrões emocionais em textos para fins científicos.
 
 
-Funcionalidades:
--Integração em tempo real das localizações no mapa, acessível via Web, Desktop e Mobile.
--Tratamento eficiente dos dados para garantir a entrega correta e rápida das informações.
+Etapa de Limpeza e Pré-Processamento:
+-Remoção de URLs, menções e caracteres especiais.
+-Conversão de textos para letras minúsculas.
+-Remoção de palavras irrelevantes (stopwords) e aplicação de stemming para reduzir palavras às suas raízes.
 
-Segurança e Permissões
-IAM (Identity and Access Management):
-Utilizado o perfil LabRole para conectar os serviços da AWS entre si, garantindo que cada serviço tenha as permissões necessárias para executar suas funções.
+Extração de Características?
 
-Práticas de Segurança:
-Uso de chaves privadas para acessar a instância Amazon EC2 via SSH, garantindo uma conexão segura.
+-Utilizamos o TfidfVectorizer para transformar os textos em representações numéricas, considerando unigramas e bigramas.
+-Configuramos o vetorizador para capturar os padrões mais relevantes nos dados.
+
+
+Modelos de Machine Learning
+-Inicialmente, foi testado o modelo Naive Bayes.
+-Após melhorias, utilizamos a Regressão Logística, que apresentou resultados superiores.
+Protocolo de Experimentos e Validação
+
+O dataset foi dividido em:
+70% para treinamento.
+15% para validação.
+15% para teste.
+-Avaliação do modelo foi feita com métricas como precisão, recall e F1-score.
+
+Discussão dos Resultados e Trabalhos Futuros:
+
+Resultados: O modelo final apresentou um F1-score médio de 0.85 no conjunto de validação.
+Trabalhos Futuros:
+-Experimentar modelos mais avançados, como BERT.
+-Ampliar o dataset para melhorar a generalização.
+-Implementar uma interface para uso em tempo real.
+
+
+Arquivos no Repositório
+emotions.ipynb: Notebook principal com o pipeline do projeto.
+tweet_emotions.csv: Dataset utilizado.
+README.md: Este arquivo
