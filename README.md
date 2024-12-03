@@ -4,7 +4,9 @@ Repositório para arquivos referente a atividade final do Curso de Desenvolvimen
 Integrantes:
 
 Leonardo Rodrigues Dezoti Ferraz
+
 Lucas Augusto Borges Rogatto
+
 Vitor Gabriel Montini Melo
 
 
