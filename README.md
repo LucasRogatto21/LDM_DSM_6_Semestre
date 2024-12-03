@@ -32,13 +32,13 @@ Etapa de Limpeza e Pré-Processamento:
 -Conversão de textos para letras minúsculas.
 -Remoção de palavras irrelevantes (stopwords) e aplicação de stemming para reduzir palavras às suas raízes.
 
-Extração de Características?
+Extração de Características:
 
 -Utilizamos o TfidfVectorizer para transformar os textos em representações numéricas, considerando unigramas e bigramas.
 -Configuramos o vetorizador para capturar os padrões mais relevantes nos dados.
 
 
-Modelos de Machine Learning
+Modelos de Machine Learning:
 -Inicialmente, foi testado o modelo Naive Bayes.
 -Após melhorias, utilizamos a Regressão Logística, que apresentou resultados superiores.
 Protocolo de Experimentos e Validação
