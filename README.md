@@ -21,7 +21,7 @@ A classificação de emoções é uma ferramenta poderosa em áreas como anális
 
 Descrição da Base de Dados:
 
-Fonte: Dataset contendo 5.250 postagens em redes sociais, cada uma classificada em diferentes categorias emocionais, como alegria, raiva, tristeza, e surpresa.
+Fonte: Dataset adiquirido no site da Kaggle contendo 5.250 postagens em redes sociais, cada uma classificada em diferentes categorias emocionais, como alegria, raiva, tristeza, e surpresa.
 
 Distribuição: Classes bem distribuídas para evitar viés no treinamento.
 
