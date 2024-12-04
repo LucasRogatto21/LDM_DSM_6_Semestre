@@ -23,9 +23,6 @@ Descrição da Base de Dados:
 
 Fonte: Dataset adiquirido no site da Kaggle contendo 5.250 postagens em redes sociais, cada uma classificada em diferentes categorias emocionais, como alegria, raiva, tristeza, e surpresa.
 
-Distribuição: Classes bem distribuídas para evitar viés no treinamento.
-
-Processo de Obtenção: Dataset foi obtido em formato público e preprocessado para adequação ao modelo.
 
 
 
@@ -99,5 +96,7 @@ Arquivos no Repositório
 emotions.ipynb: Notebook principal com o pipeline do projeto.
 
 tweet_emotions.csv: Dataset utilizado.
+
+atividade_NLP.mkv: Video explicativo do Projeto
 
 README.md: Este arquivo
